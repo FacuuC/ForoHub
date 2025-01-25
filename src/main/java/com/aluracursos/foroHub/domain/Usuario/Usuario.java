@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
 @Entity(name="Usuario")
 @Table(name="usuarios")
 @Getter
-@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 public class Usuario {
@@ -26,6 +25,8 @@ public class Usuario {
     private String email;
     @NotBlank
     private String contraseña;
+
+    public Usuario() {}
 
     public Usuario(@Valid DatosRegistroUsuario datos) {
         this.nombre = datos.nombre();
