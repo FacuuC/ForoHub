@@ -13,16 +13,27 @@ Los usuarios pueden registrarse, autenticarse y crear publicaciones asociadas a 
 - **Spring Data JPA**
 - **PostgreSQL**
 - **Maven**
+- **Postman**
+- **Git / GitHub**
 
 ---
 
-## ⚙️ Funcionalidades principales
+## ⚙️ Estructura y funcionalidades principales
 
-- Registro y autenticación de usuarios mediante **JWT**.  
-- Creación, actualización y eliminación de publicaciones.  
-- Asociación de publicaciones a diferentes tópicos.  
-- Persistencia en **PostgreSQL** con manejo de migraciones mediante **Flyway**.  
-- Validaciones y manejo de excepciones personalizadas.  
+🔐 Autenticación:
+-Endpoint /login para validar credenciales.
+-Generación de tokens JWT para acceso autenticado.
+-Manejo de errores y respuestas personalizadas.
+
+👤 Usuarios:
+-Registro de nuevos usuarios mediante /usuarios.
+-Cifrado de contraseñas con PasswordEncoder.
+-Validación de duplicados por email.
+
+💬 Tópicos:
+-Creación, listado, actualización y eliminación (CRUD) de tópicos.
+-Asociación de cada tópico con un usuario existente.
+-Validación de integridad y uso de DTOs (DatosRegistroTopico, DatosRespuestaTopico, etc.).
 
 ---
 
@@ -40,8 +51,17 @@ Los usuarios pueden registrarse, autenticarse y crear publicaciones asociadas a 
 
 ---
 
+## 🧠 Aprendizajes y objetivos
+
+-Implementación de autenticación JWT con Spring Security.
+-Uso de JPA/Hibernate para persistencia de datos.
+-Manejo de relaciones entre entidades (Usuario–Tópico).
+-Práctica de principios REST y estructura modular en Spring Boot.
+-Validaciones, excepciones personalizadas y pruebas con Postman.
+
 ## 🧑‍💻 Autor
 
 **Facundo Costamagna**  
+[Gmail] costamagnafacundo@gmail.com
 [LinkedIn](https://www.linkedin.com/in/facucostamagna)
 
